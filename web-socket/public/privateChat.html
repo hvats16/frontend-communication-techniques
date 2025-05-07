@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Chat</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>WebSocket Private Chat</h1>
+  
+  <div class="nav-links">
+    <a href="/broadcast">Broadcast Chat</a>
+    <a href="/private">Private Chat</a>
+  </div>
+  
+  <div class="chat-area">
+    <div class="user-list" id="user-list">
+      <h3 style="text-align:center">Online Users</h3>
+      <!-- User list will be populated here -->
+    </div>
+    
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Private Chat</h2>
+        <div class="recipient-info" id="recipient-info">Select a user to chat</div>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="status" id="connection-status">Disconnected</div>
+      </div>
+      <div class="chat-input">
+        <input 
+          type="text" 
+          id="message-input" 
+          placeholder="Type your message here..." 
+          autocomplete="off"
+        />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/privateChat.js"></script>
+</body>
+</html> 
