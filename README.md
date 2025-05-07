@@ -6,6 +6,8 @@ This repository contains different communication methods between client and serv
 
 - **short-polling**: Implementation of short polling communication technique
   - A simple demonstration of client repeatedly requesting updates from server
+- **long-polling**: Implementation of long polling communication technique
+  - A technique where the server holds the request until new data is available
 
 ## Getting Started
 
@@ -14,6 +16,25 @@ This repository contains different communication methods between client and serv
 1. Navigate to the short-polling directory:
    ```
    cd short-polling
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Run the application:
+   ```
+   node index.js
+   ```
+
+4. Open `index.html` in your browser to see the client-side implementation
+
+### Long Polling
+
+1. Navigate to the long-polling directory:
+   ```
+   cd long-polling
    ```
 
 2. Install dependencies:
