@@ -10,6 +10,8 @@ This repository contains different communication methods between client and serv
   - A technique where the server holds the request until new data is available
 - **web-socket**: Implementation of WebSocket communication technique
   - A full-duplex communication channel over a single, long-lived connection
+- **server-sent-events**: Implementation of Server-Sent Events communication technique
+  - A one-way communication channel where server pushes updates to the client
 
 ## Getting Started
 
@@ -56,6 +58,25 @@ This repository contains different communication methods between client and serv
 1. Navigate to the web-socket directory:
    ```
    cd web-socket
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Run the application:
+   ```
+   node index.js
+   ```
+
+4. Open `index.html` in your browser to see the client-side implementation
+
+### Server-Sent Events
+
+1. Navigate to the server-sent-events directory:
+   ```
+   cd server-sent-events
    ```
 
 2. Install dependencies:

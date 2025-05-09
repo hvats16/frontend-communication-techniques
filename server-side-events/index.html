@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server-Side Events</title>
+  </head>
+  <body>
+    <h1>Server-Side Events</h1>
+    <div class="sse-events"></div>
+    <script>
+      const eventSource = new EventSource("http://localhost:3000/sse");
+      eventSource.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        const sseEvents = document.querySelector(".sse-events");
+        sseEvents.innerHTML += `<p>${data.message}</p>`;
+      };
+    </script>
+  </body>
+</html>
