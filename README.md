@@ -12,6 +12,8 @@ This repository contains different communication methods between client and serv
   - A full-duplex communication channel over a single, long-lived connection
 - **server-sent-events**: Implementation of Server-Sent Events communication technique
   - A one-way communication channel where server pushes updates to the client
+- **web-hook**: Implementation of Webhook communication technique
+  - An HTTP callback where a server-to-server notification is sent when an event occurs
 
 ## Getting Started
 
@@ -90,6 +92,30 @@ This repository contains different communication methods between client and serv
    ```
 
 4. Open `index.html` in your browser to see the client-side implementation
+
+### Webhook
+
+1. Navigate to the web-hook directory:
+   ```
+   cd web-hook
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Run the application:
+   ```
+   node index.js
+   ```
+
+4. Test the webhook endpoint using curl:
+   ```
+   curl -X POST http://localhost:3000/webhook \
+     -H "Content-Type: application/json" \
+     -d '{"event": "user.created", "data": {"id": 123, "name": "John Doe", "email": "john@example.com"}}'
+   ```
 
 ## Project Structure
 
